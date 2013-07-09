@@ -1,0 +1,394 @@
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0px;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a:focus {
+}
+a:hover,
+a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+	outline: 0;
+}
+a img,
+a:hover img {
+	border-bottom: 0px none;
+}
+
+/* =Site
+-------------------------------------------------------------- */
+body {
+	background: #0B1B3D;	
+	font: 12pt "Gochi Hand", "Century Gothic", "Lucida Sans Unicode", "Lucida Sans", "Verdana", "Arial", "Helvetica", sans-serif;
+	color: #ECE2D9;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+	clear: both;
+	font-family: "Gochi Hand", Broadway, Garamond,Georgia,serif;
+}
+h1 {
+	font-size: 200%;
+}
+h2 {
+	font-size: 180%;
+}
+h3 {
+	font-size: 160%;
+}
+h4 {
+	font-size: 140%;
+}
+h5 {
+	font-size: 120%;
+}
+h6 {
+	font-size: 100%;
+}
+
+a {
+	color: #45BEC4;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #AECB79;
+}
+
+a img {
+	border: 0;
+}
+
+#content {
+    width: 960px;
+    float: right;
+	position: relative;
+	padding: 50px 0 0 10px;
+}
+
+#open-projects {
+	width: 600px;
+	min-height: 450px;
+
+	padding: 30px 40px;
+	background: #F7AEC6;
+	border-radius: 10px;
+}
+
+#open-projects h1 {
+	position: absolute;
+	right: 0;
+	top: 0px;
+	width: 286px;
+	height: 544px;
+	background: url(images/butterfliesRight.png) right top no-repeat;
+}
+
+#open-projects h1 span {
+	display: none;
+}
+
+#open-projects ul li a {
+	display: block;
+	opacity: .7;
+}
+
+#open-projects ul li a img {
+	max-width: 100%;
+}
+
+#open-projects ul li a:hover {
+	opacity: 1;
+	transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+}
+
+#extra {
+    float: none; /* not needed, just for clarification */
+    background: url(images/butterfliesLeft.png) right top no-repeat;
+    width: auto;
+    overflow: hidden;
+	min-height: 740px;
+}
+
+#header {
+	position: absolute;
+	padding: 0 0 0 125px;
+    right: 300px;
+    top: 580px;
+    width: 610px;
+	background: url(images/butterfliesPink.png) left bottom no-repeat;
+}
+
+#footer {
+	position: absolute;
+    right: 160px;
+    top: 600px;
+}
+#social li a {
+	display: block;
+	float: left;	
+	width: 34px;
+	background: url(images/iconEmail.png) center center no-repeat;
+	height: 32px;
+	margin: 0 0 5px 0;
+	opacity: .7;
+}
+#social li a:hover {
+	opacity: 1;
+}
+#social li a span {
+	visibility: hidden;
+}
+#social {
+	width: 90px;
+}
+#social li.email a {
+	background-position: right top;
+	width: 38px;
+}
+#social li.facebook a {
+	background-image: url(images/iconFacebook.png);
+	background-position: right top;
+	width: 28px;
+}
+#social li.twitter a {
+	background-image: url(images/iconTwitter.png);
+	width: 36px;
+}
+#social li.linkedin a {
+	background-image: url(images/iconLinkedin.png);
+}
+
+
+#facebook-profile-wrapper {
+	float: left;
+	padding: .5em 1.5em 0 .5em;
+}
+#facebook-profile-wrapper img {
+	border-radius: 3px;
+}
+
+
+
+/* jcarousel */
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+    /* You need at least a height, adjust this to your needs */
+    height: 450px;
+	width: 600px;
+}
+
+.jcarousel ul {
+    width: 20000em;
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jcarousel li {
+    float: left;
+	width: 600px;
+}
+
+.jcarousel-prev {
+	position: absolute;
+	top: 250px;
+	left: 18px;
+    width: 24px;
+    height: 96px;
+    cursor: pointer;
+    background: transparent url(images/arrowLeft.png) no-repeat 0 0;
+	opacity: .5;
+}
+.jcarousel-next {
+    position: absolute;
+    top: 250px;
+    right: 288px;
+    width: 24px;
+    height: 96px;
+    cursor: pointer;
+    background: transparent url(images/arrowRight.png) no-repeat 0 0;
+	opacity: .5;
+}
+a.jcarousel-prev:hover,
+a.jcarousel-next:hover {
+	opacity: 1;
+	transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+}
+a.disabled:hover,
+a.disabled:hover,
+a.disabled {
+	opacity: 0;
+	cursor: default;
+}
+
+#more {
+	display: none;
+}
+
+/* Responsive Web */
+@media screen and (max-width: 980px) {
+	#index {
+		padding-bottom: 1em;
+	}
+	#content {
+		width: auto;
+		float: right;
+		padding: 50px 10px 0 10px;
+		position: relative;
+	}
+
+	#open-projects h1 {
+		background: none;
+	}
+
+	#open-projects {
+	}
+
+	#header {
+		right: 22px;
+	}
+
+	#footer {
+		right: 10px;
+		top: 10px;
+	}
+	#social {
+		width: 500px;
+	}
+	.jcarousel-prev {
+		left: 18px;
+	}
+	.jcarousel-next {
+		right: 18px;
+	}
+}
+
+
+@media screen and (max-width: 715px) {
+	body {
+		font-size: 150%;
+	}
+	#more {
+		display: block;
+	}
+	#extra {
+		display: none;
+	}
+	#content,
+	#header,
+	#footer,
+	#open-projects,
+	#open-projects h1 {
+		position: static;
+		width: auto;
+		height: auto;
+		padding: 0;
+		margin: 0;
+		float: none;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+	#header,
+	#open-projects {
+		background: none;
+		margin: 0 auto 10px auto;
+	}
+	#facebook-profile-wrapper {
+		padding: 1em 1em 1em 0;
+	}
+	#open-projects h1 span {
+		display: block;
+		color: #F7AEC6;
+	}
+	#open-projects ul li a {
+		padding-bottom: 5px;
+	}
+	#index {
+		padding: 10px 5%;
+	}
+	#footer {
+		overflow: hidden;
+	}
+	/* unstyle jcarousel */
+	.jcarousel {
+		position: static;
+		height: auto;
+		width: auto;
+	}
+	.jcarousel ul {
+		width: auto;
+		position: static;
+	}
+	.jcarousel li {
+		width: auto;
+		float: none;
+	}
+	.jcarousel-prev,
+	.jcarousel-next {
+		display: none;
+		position: static;
+	}
+}
