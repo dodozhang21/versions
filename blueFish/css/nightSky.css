@@ -318,7 +318,7 @@ h1.logo a span {
 .latestTweet {
 	position: absolute;
 	left: 175px;
-	top: 370px;
+	top: 390px;
 	min-width: 180px;
 }
 .latestTweet:before {
