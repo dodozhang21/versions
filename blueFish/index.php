@@ -1,6 +1,7 @@
 <?php 
 if(!isset($path)) { $path = ""; }
 if(!isset($themeListPath)) { $themeListPath = "../"; }
+if(!isset($twitterPath)) { $twitterPath = "../../"; }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +24,7 @@ if(!isset($themeListPath)) { $themeListPath = "../"; }
 	<!--[if lte IE 9]>
 		<link rel="stylesheet" type="text/css" href="css/nightSky-ie.css" media="all"/>
 	<![endif]-->
-	<script src="js/modernizr.js"></script>
+	<script src="<?=$path?>js/modernizr.js"></script>
 	<script>
 		Modernizr.load([
 		  //Animation polyfills
@@ -33,6 +34,7 @@ if(!isset($themeListPath)) { $themeListPath = "../"; }
 		  }
 		]);
 	</script>
+	<script>var twitterPath = '<?=$twitterPath?>';</script>
 	<script src="<?=$path?>js/scripts.js"></script>
 </head>
 
@@ -56,7 +58,7 @@ if(!isset($themeListPath)) { $themeListPath = "../"; }
 			  <li><a href="http://pure-essence.net/about/contact/" class="email">Email</a></li>
 			  <li><a href="//www.facebook.com/dodozhang21" class="facebook">Facebook</a></li>
 			  <li><a href="//twitter.com/dodozhang21" class="twitter">Twitter</a></li>
-			  <li><a href="//http://www.linkedin.com/in/dodozhang21" class="linkedin">LinkedIn</a></li>
+			  <li><a href="//www.linkedin.com/in/dodozhang21" class="linkedin">LinkedIn</a></li>
 			</ul>
 
 			<p id="latestTweet" class="latestTweet loading">

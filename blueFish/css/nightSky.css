@@ -910,39 +910,39 @@ h1.logo a span {
 }
 
 @media screen and (max-device-height: 1345px) {
-.downArrows {
-  position: fixed;
-  left: 50%;
-  bottom: 50px;
-  height: 15px;
-  -webkit-animation: downward .4s step-end infinite alternate;
-  -moz-animation: downward .4s step-end infinite alternate;
-  -ms-animation: downward .4s step-end infinite alternate;
-  animation: downward .4s step-end infinite alternate;
-  padding-bottom: 10px;
-}
+	.downArrows {
+	  position: fixed;
+	  left: 50%;
+	  bottom: 50px;
+	  height: 15px;
+	  -webkit-animation: downward .4s step-end infinite alternate;
+	  -moz-animation: downward .4s step-end infinite alternate;
+	  -ms-animation: downward .4s step-end infinite alternate;
+	  animation: downward .4s step-end infinite alternate;
+	  padding-bottom: 10px;
+	}
 
-.downArrows:before,
-.downArrows:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -350px;
-}
+	.downArrows:before,
+	.downArrows:after {
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  left: -350px;
+	}
 
-.downArrows:before {
-  left: -280px;
-}
+	.downArrows:before {
+	  left: -280px;
+	}
 
-.downArrows:before,
-.downArrows:after,
-.arrow {
-  display: block;
-  border: 15px solid transparent;
-  border-top-color: #d4f7ff;
-}
-.arrow {
-	position: absolute;
-	left: -210px;
-}
+	.downArrows:before,
+	.downArrows:after,
+	.arrow {
+	  display: block;
+	  border: 15px solid transparent;
+	  border-top-color: #d4f7ff;
+	}
+	.arrow {
+		position: absolute;
+		left: -210px;
+	}
 }

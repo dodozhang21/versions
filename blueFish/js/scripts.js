@@ -91,22 +91,25 @@ $(document).ready(function(){
 		});
 	}
 	
+	
 	$(window).scroll(function(){
-		$("#themes").each(function(){
-			if($(window).scrollTop() > ($(this).offset().top-301) && $(window).scrollTop() <= ($(this).offset().top + $(this).outerHeight(true))){
-				$(this).find(".logo").fadeIn();
-				$('.downArrows').hide();
-			}
-			else{
-				$(this).find(".logo").fadeOut();
-				$('.downArrows').show();
-			}
-		});
+		if($('.downArrows').css('position') == 'fixed') {
+			$("#themes").each(function(){
+				if($(window).scrollTop() > ($(this).offset().top-301) && $(window).scrollTop() <= ($(this).offset().top + $(this).outerHeight(true))){
+					$(this).find(".logo").fadeIn();
+					$('.downArrows').hide();
+				}
+				else{
+					$(this).find(".logo").fadeOut();
+					$('.downArrows').show();
+				}
+			});
+		}
 	});
 
 	// get latest tweet
 	$.ajax({
-		url: "http://regretles.com/twitter/getTweets.php",
+		url: twitterPath + "twitter/getTweets.php",
 		type: "GET",
 		data: { count : '2', user : 'dodozhang21' },
 		success: function(data, textStatus, jqXHR){
