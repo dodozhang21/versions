@@ -909,6 +909,7 @@ h1.logo a span {
   }
 }
 
+@media screen and (max-device-height: 1345px) {
 .downArrows {
   position: fixed;
   left: 50%;
@@ -943,4 +944,5 @@ h1.logo a span {
 .arrow {
 	position: absolute;
 	left: -210px;
+}
 }

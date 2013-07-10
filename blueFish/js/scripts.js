@@ -106,7 +106,7 @@ $(document).ready(function(){
 
 	// get latest tweet
 	$.ajax({
-		url: "../../twitter/getTweets.php",
+		url: "http://regretles.com/twitter/getTweets.php",
 		type: "GET",
 		data: { count : '2', user : 'dodozhang21' },
 		success: function(data, textStatus, jqXHR){

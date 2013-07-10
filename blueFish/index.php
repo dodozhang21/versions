@@ -1,3 +1,7 @@
+<?php 
+if(!isset($path)) { $path = ""; }
+if(!isset($themeListPath)) { $themeListPath = "../"; }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +13,11 @@
 	<link rel="icon" type="image/png" href="/images/icon.png" />
 		<link rel='stylesheet' id='googleFonts-css'  href='http://fonts.googleapis.com/css?family=Berkshire%20Swash|PT%20Sans' type='text/css' media='all' />
 
-	<link rel="stylesheet" type="text/css" href="css/nightSky.css" />
+	<link rel="stylesheet" type="text/css" href="<?=$path?>css/nightSky.css" />
 
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery.bxslider.4.1.min.js"></script>
-	<script type="text/javascript" src="js/plugins.js"></script>
+	<script type="text/javascript" src="<?=$path?>js/jquery.bxslider.4.1.min.js"></script>
+	<script type="text/javascript" src="<?=$path?>js/plugins.js"></script>
 
 	<!--<![endif]-->
 	<!--[if lte IE 9]>
@@ -25,11 +29,11 @@
 		  //Animation polyfills
 		  {
 			test : Modernizr.cssanimations && Modernizr.csstransitions,
-			nope : ['js/easing.js', 'js/jQueryRotateCompressed.2.2.js', 'js/animation-polyfill.js']
+			nope : ['<?=$path?>js/easing.js', '<?=$path?>js/jQueryRotateCompressed.2.2.js', '<?=$path?>js/animation-polyfill.js']
 		  }
 		]);
 	</script>
-	<script src="js/scripts.js"></script>
+	<script src="<?=$path?>js/scripts.js"></script>
 </head>
 
 
@@ -70,7 +74,7 @@
 			</header>
 			<article class="themes">
 				<ul id="sb-slider" class="bxslider">
-					<?php include('../themesList.php'); printThemes(); ?>
+					<?php include($themeListPath . 'themesList.php'); printThemes(); ?>
 				</ul>
 			</article>
 		</div>
