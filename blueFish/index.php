@@ -72,7 +72,7 @@ if(!isset($twitterPath)) { $twitterPath = "../../"; }
 
 		<div id="themes">
 			<header>
-				<h1 class="logo"><a href="#intro" class="scrolltoanchor" title="Back to intro"><span>About</span></a></h1>
+				<h1 class="logo"><a href="#intro" class="scrolltoanchor" title="Back to intro"><span>Themes and More</span></a></h1>
 			</header>
 			<article class="themes">
 				<ul id="sb-slider" class="bxslider">

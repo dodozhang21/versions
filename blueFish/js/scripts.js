@@ -7,7 +7,7 @@ $(document).ready(function(){
 		mode: 'fade',
 		auto: true,
 		autoControls: true,
-		slideWidth: 650
+		slideWidth: 600
 	});
 
 		/*$(window).bind('shake', shakeEventDidOccur);*/
@@ -49,15 +49,17 @@ $(document).ready(function(){
 	
 	//function to call when shake occurs
 	function shake() {
-		$('.cell-image').transition({rotate:'-10deg'},200,'in-out');
-		$('.cell-image').transition({rotate:'10deg'},200,'in-out');
-		$('.cell-image').transition({rotate:'-10deg'},200,'in-out');
-		$('.cell-image').transition({rotate:'10deg'},300,'in-out');
-		$('.cell-image').transition({rotate:'-5deg'},300,'in-out');
-		$('.cell-image').transition({rotate:'2deg'},300,'in-out');
-		$('.cell-image').transition({rotate:'0deg'},300,'in-out', function(){
-			$('.cell-image').attr('style','');
-		});
+		if($('.bx-pager').css('display') == 'block') {
+			$('.cell-image').transition({rotate:'-10deg'},200,'in-out');
+			$('.cell-image').transition({rotate:'10deg'},200,'in-out');
+			$('.cell-image').transition({rotate:'-10deg'},200,'in-out');
+			$('.cell-image').transition({rotate:'10deg'},300,'in-out');
+			$('.cell-image').transition({rotate:'-5deg'},300,'in-out');
+			$('.cell-image').transition({rotate:'2deg'},300,'in-out');
+			$('.cell-image').transition({rotate:'0deg'},300,'in-out', function(){
+				$('.cell-image').attr('style','');
+			});
+		}
 		
 	}
 
