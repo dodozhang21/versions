@@ -1,3 +1,8 @@
+<?php 
+if(!isset($path)) { $path = ""; }
+if(!isset($themeListPath)) { $themeListPath = "../"; }
+if(!isset($twitterPath)) { $twitterPath = "../../"; }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,9 +28,7 @@
 <section id="header" class="body">
 	<header><h1><a href="http://regretless.com" title="regretless.com"><span>The gal behind the scene...</span></a></h1></header>
 	<article class="body">
-		<p><div id="facebook-profile-wrapper"><img src="http://graph.facebook.com/1055884671/picture?type=small" id="facebook-profile" alt="facebook profile photo" title="facebook profile photo"/></div>
-		Welcome to regretless.com! My name is Ying Zhang and I'm a professional programmer and web designer. I specialize in responsive web design and Java web applications. I currently work full time as a Sr. Systems Engineer for Meredith on their parents.com team.  In my spare time, I enjoy writing on <a href="http://pure-essence.net/" title="pure-essence.net">my blog pure-essence.net</a> and create WordPress themes.  Regretless.com is a portfolio for my free WordPress themes and other hobby websites. Happy browsing!
-		</p>
+		<?php include($themeListPath . 'about.php'); ?>
 	</article>
 </section>
 
@@ -54,12 +57,7 @@
 </section><!-- /#content -->
 
 <footer id="footer">
-	<ul id="social">
-		<li class="email"><a href="//pure-essence.net/about/contact/" title="email"><span>Email</span></a></li>
-		<li class="facebook"><a href="//facebook.com/dodozhang21" title="facebook"><span>Facebook</span></a></li>
-		<li class="twitter"><a href="//twitter.com/dodozhang21" title="twitter"><span>Twitter</span></a></li>
-		<li class="linkedin"><a href="//www.linkedin.com/in/dodozhang21" title="linkedin"><span>Linkedin</span></a></li> 
-	</ul>
+	<?php include($themeListPath . 'social.php'); ?>
 </footer>
 
 <div id="extra"></div><!-- /#extra -->

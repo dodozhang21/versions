@@ -179,7 +179,7 @@ a img {
     right: 160px;
     top: 600px;
 }
-#social li a {
+.social li a {
 	display: block;
 	float: left;	
 	width: 34px;
@@ -187,30 +187,28 @@ a img {
 	height: 32px;
 	margin: 0 0 5px 0;
 	opacity: .7;
+	text-indent: -9999px;
 }
-#social li a:hover {
+.social li a:hover {
 	opacity: 1;
 }
-#social li a span {
-	visibility: hidden;
-}
-#social {
+.social {
 	width: 90px;
 }
-#social li.email a {
+.social li a.email {
 	background-position: right top;
 	width: 38px;
 }
-#social li.facebook a {
+.social li a.facebook {
 	background-image: url(images/iconFacebook.png);
 	background-position: right top;
 	width: 28px;
 }
-#social li.twitter a {
+.social li a.twitter {
 	background-image: url(images/iconTwitter.png);
 	width: 36px;
 }
-#social li.linkedin a {
+.social li a.linkedin {
 	background-image: url(images/iconLinkedin.png);
 }
 
@@ -313,7 +311,7 @@ a.disabled {
 		right: 10px;
 		top: 10px;
 	}
-	#social {
+	.social {
 		width: 500px;
 	}
 	.jcarousel-prev {

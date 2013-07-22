@@ -51,17 +51,10 @@ if(!isset($twitterPath)) { $twitterPath = "../../"; }
 			<span class="balance balance-2">&nbsp;</span>
 		</header><!-- /header -->
 		<article class="about">
-			<div id="facebook-profile-wrapper" class="cell-image"><img src="http://graph.facebook.com/1055884671/picture?type=small" id="facebook-profile" alt="facebook profile photo" title="facebook profile photo"/></div>
-			<p>
-			Welcome to regretless.com! My name is Ying Zhang and I'm a professional programmer and web designer. I specialize in responsive web design and Java web applications. I currently work full time as a Sr. Systems Engineer for Meredith on their parents.com team.  In my spare time, I enjoy writing on <a href="http://pure-essence.net/" title="pure-essence.net">my blog pure-essence.net</a> and create WordPress themes.  These days I also play on <a href="http://codepen.io/dodozhang21/">codepen.io</a>. Regretless.com is a portfolio for my free WordPress themes and other hobby websites. Happy browsing!
-			</p>
+			<?php include($themeListPath . 'about.php'); ?>
 			
-			<ul class="social">
-			  <li><a href="http://pure-essence.net/about/contact/" class="email">Email</a></li>
-			  <li><a href="//www.facebook.com/dodozhang21" class="facebook">Facebook</a></li>
-			  <li><a href="//twitter.com/dodozhang21" class="twitter">Twitter</a></li>
-			  <li><a href="//www.linkedin.com/in/dodozhang21" class="linkedin">LinkedIn</a></li>
-			</ul>
+			
+			<?php include($themeListPath . 'social.php');  ?>
 
 			<p id="latestTweet" class="latestTweet loading">
 			&nbsp;
