@@ -95,15 +95,16 @@ $(document).ready(function(){
 	
 	
 	$(window).scroll(function(){
-		if($('.downArrows').css('position') == 'fixed') {
+		var arrow = $('.arrow');
+		if($(arrow).css('position') == 'fixed') {
 			$("#themes").each(function(){
 				if($(window).scrollTop() > ($(this).offset().top-301) && $(window).scrollTop() <= ($(this).offset().top + $(this).outerHeight(true))){
 					$(this).find(".logo").fadeIn();
-					$('.downArrows').hide();
+					$(arrow).hide();
 				}
 				else{
 					$(this).find(".logo").fadeOut();
-					$('.downArrows').show();
+					$(arrow).show();
 				}
 			});
 		}

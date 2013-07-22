@@ -568,15 +568,14 @@ h1.logo a span {
 
 @media screen and (max-width: 460px) {
 	.logo {
-		position: relative;
+		
 	}
 	.logo a {
-		position: absolute;
-		left: -10%;
-		right: -10%;
+		background-color: transparent;
+		background-position: left top;
 	}
 	.about {
-		margin-top: 210px;
+		
 	}
 
 }
@@ -743,6 +742,7 @@ h1.logo a span {
 }
 
 #themes {
+	background: transparent;
 	margin: 900px auto 100px auto;
 	width: 650px;
 	position: relative;
@@ -750,7 +750,7 @@ h1.logo a span {
 
 #themes:after {
 	position: absolute;
-	bottom: -190px;
+	bottom: -160px;
 	content: url(../images/nightSky/themeOcean.png);
 	z-index: 999;
 }
@@ -766,6 +766,10 @@ h1.logo a span {
 	background-image: url(../images/nightSky/themeOwl.png);
 }
 
+#themes .logo a span {
+	visibility: hidden;
+}
+
 
 #themes header {
 	height: 210px;
@@ -778,24 +782,30 @@ h1.logo a span {
 
 
 
+.bxslider li .sb-description {
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.75);
+	left: -10px;
+	width: 610px;
+}
 
-
-
+.bx-prev,.bx-next {
+	top: 40%;
+}
 .bx-prev {
-	left: -60px;
+	left: -90px;
 }
 .bx-next {
-	right: -60px;
+	right: -90px;
 }
 .bx-controls-auto {
 	right: 10px;
-	bottom: 5px;
+	bottom: -15px;
 }
 
 .bx-pager {
 	display: block;
 	left: 10px;
-	bottom: -55px;
+	bottom: -78px;
 }
 .bx-pager-item {
 	display: inline-block;
@@ -845,6 +855,8 @@ h1.logo a span {
 	-moz-transition: -moz-transform 0.3s, opacity 0.4s;
 	transition: transform 0.3s, opacity 0.4s;
 }
+
+
 
 #footer a {
 	display: inline-block;
@@ -1065,7 +1077,44 @@ h1.logo a span {
   }
 }
 
+.arrow {
+	display: none;
+}
+
+
 @media screen and (max-height: 1345px) and (min-width: 930px) {
+.arrow {
+	display: block;
+	position: fixed;
+	left: 50%;
+	bottom: 50px;
+	margin-left: -250px;
+}
+
+.bounce {
+	-webkit-animation-name: bounce;
+	-moz-animation-name: bounce;
+	-o-animation-name: bounce;
+	animation-name: bounce;
+}
+.animated{-webkit-animation-fill-mode:both;
+-moz-animation-fill-mode:both;
+-ms-animation-fill-mode:both;
+-o-animation-fill-mode:both;
+
+            animation-iteration-count: infinite;
+       -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+
+animation-fill-mode:both;
+-webkit-animation-duration:2s;
+-moz-animation-duration:2s;
+-ms-animation-duration:2s;
+-o-animation-duration:2s;
+animation-duration:2s;
+}
+
+/*
 	.downArrows {
 	  position: fixed;
 	  left: 50%;
@@ -1101,4 +1150,31 @@ h1.logo a span {
 		position: absolute;
 		left: -210px;
 	}
+	*/
+}
+
+
+
+
+
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	40% {-webkit-transform: translateY(-30px);}
+	60% {-webkit-transform: translateY(-15px);}
+}
+
+@-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+	40% {-moz-transform: translateY(-30px);}
+	60% {-moz-transform: translateY(-15px);}
+}
+
+@-o-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+	40% {-o-transform: translateY(-30px);}
+	60% {-o-transform: translateY(-15px);}
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
 }
