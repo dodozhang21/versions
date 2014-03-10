@@ -20,28 +20,6 @@ $black: #000;
 $textColor: #333;
 
 
-
-@include keyframes(themeColorChange) {
-	0%, 40%, 60% {
-    color: $pink;
-  }
-  49% {
-    color: $pink;
-  }
-  55% {
-    color: $blue;
-  }
-}
-
-@include keyframes(regretlessColorChange) {
-	from {
-		color: $purpleRed;
-	}
-	to {
-		color: $lightPink;
-	}
-}
-
 body {
 	background-color: #fff;
 	margin: 0;
@@ -70,6 +48,7 @@ a {
 #container {
 	padding-top: 1em;
 	position: relative;
+	overflow-x: hidden;
 	&:before, &:after {
 		content: '';
 		position: absolute;
@@ -100,11 +79,6 @@ a {
 	padding: 1em;
 	p{
 		padding: 0 1em;
-		&:first-letter {
-			font-size: 200%;
-			float: left;
-			padding-left: 1em;
-		}
 	}
 	&:after {
 		content: '';
@@ -143,6 +117,7 @@ a {
 				position: absolute;
 				display: block;
 				@include backgroundSvg("regretless.svg",100%);
+				z-index: 2;
 			}
 		}
 	}
@@ -184,12 +159,6 @@ a {
 				line-height: 0;
 			}
 		}
-		&:first-child {
-			text-align: left;
-		}
-		&:last-child {
-			text-align: right;
-		}
 	}
 	a {
 		display: inline-block;
@@ -220,7 +189,7 @@ a {
 			font-variant: normal;
 			text-transform: none;
 			display: block;
-			top: 47%;
+			top: 48%;
 		}
 		&.email:after { 
 			left: 23%;
@@ -309,7 +278,7 @@ a {
 		@include backgroundSvg("blue_flower.svg", 100px);
 		opacity: .5;
 		left: -30px;
-		top: -3em;
+		top: -4em;
 	}
 	&:after {
 		@include backgroundSvg("04_flower.svg", 300px);
@@ -318,17 +287,16 @@ a {
 		top: -200px;
 	}
 	h1 {
-		margin: 0 0 0 1rem;
+		margin: 0;
 		padding: 0 0 0 2rem;
 		font-size: 0;
 		&:before {
-			content: '\e800';
-			font-family: 'dragonIsComing';
-			font-size: 35px;
-			color: $pink;
-			line-height: 60px;
-			@include animation(themeColorChange 5s linear alternate infinite);
-			text-shadow: 1px 1px $blue;
+			content: '';
+			@include backgroundSvg("themesAndMore.svg", 60%, 50px);
+			display: inline-block;
+			position: absolute;
+			top: -13%;
+			left: 13%;
 		}
 	}
 	.sb-description {
@@ -350,9 +318,11 @@ a {
 			font-family: 'Roboto Slab', serif;
 			font-size: 150%;
 			position: absolute;
-			top: .1em;
+			top: 0;
 			left: 10%;
 			@include transition(all 0.2s);
+			white-space: nowrap;
+			line-height: 0;
 		}
 		a.download {
 			display: block;
@@ -456,6 +426,7 @@ a {
 		top: 20%;
 		font-size: 90%;
 		color: $footerCreditColor;
+		white-space: nowrap;
 	}
 	a {
 		right: 15%;

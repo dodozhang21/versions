@@ -9,6 +9,15 @@ module.exports = function(grunt) {
 			}
 		}
     },
+	cssmin: {
+	  minify: {
+		expand: true,
+		cwd: 'css/',
+		src: ['*.css', '!*.min.css'],
+		dest: 'css/'
+//		ext: '.css'
+	  }
+	},
     watch: {
       grunt: { files: ['Gruntfile.js'] },
 
@@ -24,8 +33,9 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
 
-  grunt.registerTask('build', ['compass']);
+  grunt.registerTask('build', ['compass', 'cssmin']);
   grunt.registerTask('default', ['build','watch']);
 }

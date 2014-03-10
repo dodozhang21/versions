@@ -53,8 +53,7 @@ p {
 		margin-left: 0;
 		text-align: center;
 		&:before {
-			display: inline-block;
-			font-size: 33px;
+			top: -15%;
 		}
 	}
 	&:before, &:after {

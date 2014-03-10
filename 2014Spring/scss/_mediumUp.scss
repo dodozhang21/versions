@@ -7,21 +7,11 @@
 		left: -50px;
 	}
 }
-.social {
-	div:first-child, div:last-child {
-		text-align: center;
-	}
-}
 #themes {
 	margin-top: 10rem;
 	h1 {
-		position: relative;
 		&:before {
-			font-size: 50px;
-			position: absolute;
-			top: -5rem;
-			left: 1.5rem;
-			z-index: 1001;
+			top: -17%;
 		}
 	}
 	&:before,&:after {

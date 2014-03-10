@@ -1,6 +1,7 @@
 $maxWidth: 990px;
 #container {
 	padding-top: 50px;
+	overflow: visible;
 	&:before {
 		@include background-image(linear-gradient(to bottom, $white, $orange 17%, $white));
 	}
@@ -41,26 +42,10 @@ $maxWidth: 990px;
 			width: auto;
 			background: none;
 			margin-left: 0;
-			&:before {
-				content: '\e801';
-				font-family: 'dragonIsComing';
-				font-size: 45px;
-				color: $purpleRed;
-				line-height: 60px;
-				text-shadow: 1px 1px $lightPink;
-				z-index: 2;
-				background: none;
-//				@include animation(regretlessColorChange 15s linear infinite); // chrome cannot handle this for some reason
-			}
 		}
 	}
 	p {
 		padding-top: 0;
-		&:first-letter {
-			float: none;
-			font-size: inherit;
-			padding: 0;
-		}
 	}
 	&:before, &:after {
 		content: '';
@@ -116,10 +101,8 @@ $maxWidth: 990px;
 	margin-top: 5rem;
 	h1 {
 		&:before {
-			text-shadow: 1px 1px $panelColor;
-			@include animation(none);
-			color: $pink;
-			top: -4rem;
+			top: -12%;
+			left: 7%;
 		}
 	}
 	position: absolute;
