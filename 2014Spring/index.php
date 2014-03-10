@@ -24,6 +24,10 @@ if(!isset($twitterPath)) { $twitterPath = "../../"; }
 <body>
 <div id="container">
 	<section id="wrapper">
+		<div class="butterfly" title="Spring is here!">
+		  <div class="wing1"></div>
+		  <div class="wing2"></div>
+		</div>
 		<div id="intro">
 			<header id="header">
 				<h1 class="logo"><a href="http://regretless.com" title="regretless.com"><span>The gal behind the scene...</span></a></h1>
@@ -31,34 +35,35 @@ if(!isset($twitterPath)) { $twitterPath = "../../"; }
 			<article class="about">
 				<div id="facebook-profile-wrapper"><img src="http://graph.facebook.com/1055884671/picture?type=small" id="facebook-profile" alt="facebook profile photo" title="facebook profile photo"/></div>
 				<p>
-				Welcome to regretless.com! My name is Ying Zhang and I'm a professional programmer and web designer. I specialize in responsive web design and Java web applications. I currently work full time as a Sr. Systems Engineer for Meredith on their parents.com/bhg.com team.  In my spare time, I enjoy writing on my blog <a href="http://pure-essence.net/" title="pure-essence.net">pure-essence.net</a> and create WordPress themes.  These days I also play on <a href="http://codepen.io/dodozhang21/">codepen.io</a>. Regretless.com is a portfolio for my free WordPress themes and other hobby websites. Happy browsing!
-				</p>
-				
-				<div class="row social">
-					<div class="large-3 medium-3 small-3 columns">
-						<a href="http://pure-essence.net/about/contact/" class="email">Email</a>
-					</div>
-					<div class="large-3 medium-3 small-3 columns">
-						<a href="//www.facebook.com/dodozhang21" class="facebook">Facebook</a>
-					</div>
-					<div class="large-3 medium-3 small-3 columns">
-						<a href="//twitter.com/dodozhang21" class="twitter">Twitter</a>
-					</div>
-					<div class="large-3 medium-3 small-3 columns">
-						<a href="//www.linkedin.com/in/dodozhang21" class="linkedin">LinkedIn</a>
-					</div>
-				</div>
-
-				<p id="latestTweet" class="latestTweet loading">
-				&nbsp;
+				Welcome to regretless.com! My name is Ying Zhang and I'm a professional programmer and web designer. I've spent almost two decades designing web pages and create web applications.  My specialty is responsive web design and Java web application. I currently work full time as a Sr. Systems Engineer for Meredith on their parents.com/bhg.com team.  In my spare time, I enjoy writing on my blog <a href="http://pure-essence.net/" title="pure-essence.net">pure-essence.net</a> and create WordPress themes.  These days I also play on <a href="http://codepen.io/dodozhang21/">codepen.io</a>. Regretless.com is a portfolio for my free WordPress themes and other hobby websites. Happy browsing!
 				</p>
 			</article>
 		</div>
 
+		<div class="row social">
+			<div class="large-2 medium-3 small-3 columns">
+				<a href="http://pure-essence.net/about/contact/" class="email">Email</a>
+			</div>
+			<div class="large-2 medium-3 small-3 columns">
+				<a href="//www.facebook.com/dodozhang21" class="facebook">Facebook</a>
+			</div>
+			<div class="large-2 medium-3 small-3 columns">
+				<a href="//twitter.com/dodozhang21" class="twitter">Twitter</a>
+				<h4>Latest Tweets</h4>
+			</div>
+			<div class="large-6 medium-3 small-3 columns">
+				<a href="//www.linkedin.com/in/dodozhang21" class="linkedin">LinkedIn</a>
+			</div>
+		</div>
+
+		<p id="latestTweet" class="latestTweet loading">
+		&nbsp;
+		</p>
+
 
 		<div id="themes">
 			<header>
-				<h1 class="logo"><a href="#container" class="themesAndMore scrolltoanchor" title="Back to intro"><span>Themes and More</span></a></h1>
+				<h1 class="logo">Themes and More</h1>
 			</header>
 			<article class="themes">
 				<ul id="sb-slider" class="bxslider">

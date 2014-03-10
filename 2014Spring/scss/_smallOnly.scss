@@ -1,0 +1,78 @@
+p {
+	font-size: .85rem;
+}
+
+#intro, .latestTweet {
+	background: rgba($panelColor, .5);
+}
+
+#intro {
+	p {
+		padding: 1em 1em 0 1em;
+	}
+	#header {
+		&:before {
+			right: -100px;
+			z-index: -1;
+		}
+	}
+	.logo {
+		position: relative;
+		height: 30px;
+		a {
+			display: inline-block;
+			min-width: 80%;
+			margin-left: 0;
+			height: 70px;
+			position: absolute;
+			top: -20px;
+			right: 0;
+			z-index: 10;
+		}
+	}
+	#facebook-profile-wrapper {
+		margin: 0 -1.5em 1em 1em;
+		float: right;
+	}
+}
+.social {
+	div, div:first-child, div:last-child {
+		padding: 0;
+		text-align: center;
+	}
+}
+.latestTweet {
+	ul {
+		padding-top: 0;
+	}
+}
+#themes {
+	margin-top: 4rem;
+	h1 {
+		padding-left: 0;
+		margin-left: 0;
+		text-align: center;
+		&:before {
+			display: inline-block;
+			font-size: 33px;
+		}
+	}
+	&:before, &:after {
+		z-index: -1;
+	}
+	background: rgba($panelColor, .7);
+	.bx-wrapper {
+		border-radius: 10px;
+		img {
+			border-radius: 10px;
+		}
+	}
+}
+#footer {
+	&:after {
+		display: none;
+	}
+	p {
+		font-size: 80%;
+	}
+}

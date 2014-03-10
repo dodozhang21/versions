@@ -1,0 +1,168 @@
+$maxWidth: 990px;
+#container {
+	padding-top: 50px;
+	&:before {
+		@include background-image(linear-gradient(to bottom, $white, $orange 17%, $white));
+	}
+}
+#wrapper {
+	max-width: $maxWidth;
+	position: relative;
+	&:before, &:after {
+		content: '';
+		position: absolute;
+	}
+	&:before {
+		@include backgroundSvg("green_flower.svg", 100px);
+		left: -35px;
+		top: 30px;
+		z-index: 1003;
+		@include animation(rotate 10s linear infinite);
+	}
+	&:after {
+		right: 145px;
+		top: 375px;
+		@include transform(rotate(15deg));
+		@include backgroundSvg("04_flower.svg", 300px);
+		z-index: -1;
+	}
+}
+
+#intro {
+	float: right;
+	width: auto;
+	margin-top: 50px;
+	margin-left: 700px;
+	margin-bottom: 100px;
+	@include transform(rotate(2deg));
+	.logo {
+		height: 60px;
+		a {
+			width: auto;
+			background: none;
+			margin-left: 0;
+			&:before {
+				content: '\e801';
+				font-family: 'dragonIsComing';
+				font-size: 45px;
+				color: $purpleRed;
+				line-height: 60px;
+				text-shadow: 1px 1px $lightPink;
+				z-index: 2;
+				background: none;
+//				@include animation(regretlessColorChange 15s linear infinite); // chrome cannot handle this for some reason
+			}
+		}
+	}
+	p {
+		padding-top: 0;
+		&:first-letter {
+			float: none;
+			font-size: inherit;
+			padding: 0;
+		}
+	}
+	&:before, &:after {
+		content: '';
+		position: absolute;
+	}
+	&:after {
+		@include backgroundSvg("01_flower.svg", 600px, 200px);
+		top: -110px;
+		left: -150px;
+		right: auto;
+		bottom: auto;
+		@include transform(rotate(-5deg));
+		opacity: .7
+	}
+	&:before {
+		@include backgroundSvg("01_butterfly.svg", 100px);
+		top: 20px;
+		right: -80px;
+	}
+	#header {
+		&:before, &:after {
+			display: none;
+		}
+	}
+	#facebook-profile-wrapper {
+		margin-top: 2rem;
+		margin-left: -3rem;
+	}
+}
+
+.social, .latestTweet {
+	position: absolute;
+	left: 0;
+}
+.social {
+	top: 550px;
+	width: 500px;
+	div, div:first-child, div:last-child {
+		text-align: left;
+		h4 {
+			text-align: left;
+			&:after {
+				margin-left: 8px;
+			}
+		}
+	}
+}
+.latestTweet {
+	top: 650px;
+	width: 600px;
+}
+#themes {
+	margin-top: 5rem;
+	h1 {
+		&:before {
+			text-shadow: 1px 1px $panelColor;
+			@include animation(none);
+			color: $pink;
+			top: -4rem;
+		}
+	}
+	position: absolute;
+	width: 600px;
+	top: 0;
+	left: 0;
+	&:before {
+		@include backgroundSvg("02_flower.svg", 500px);
+		top: -340px;
+		left: -50px;
+		@include transform(rotate(45deg));
+		z-index: -1;
+	}
+	&:after {
+		display: none;
+	}
+	
+}
+#footer {
+	clear: both;
+	width: 100%;
+	max-width: $maxWidth;
+	&:before {
+		display: none;
+	}
+	&:after {
+		right: 0;
+		top: -230px;
+	}
+	p {
+		top: 60px;
+		&:before {
+			top: -100px;
+			left: -200px;
+			@include transform(rotate(15deg));
+		}
+		&:after {
+			left: auto;
+			right: -250px;
+			@include animation(rotate 10s linear infinite);
+		}
+	}
+	a {
+		display: none;
+	}
+}

@@ -33,6 +33,15 @@ $textColor: #333;
   }
 }
 
+@include keyframes(regretlessColorChange) {
+	from {
+		color: $purpleRed;
+	}
+	to {
+		color: $lightPink;
+	}
+}
+
 body {
 	background-color: #fff;
 	margin: 0;
@@ -71,7 +80,7 @@ a {
 		right: 0;
 		left: 0;
 		height: 100%;
-		@include background-image(linear-gradient(top, $orange, $white));
+		@include background-image(linear-gradient(to bottom, $orange, $white));
 	}
 }
 
@@ -87,9 +96,10 @@ a {
 }
 
 #intro {
+	margin-bottom: 0;
 	padding: 1em;
 	p{
-		padding: 1em 1em 0 1em;
+		padding: 0 1em;
 		&:first-letter {
 			font-size: 200%;
 			float: left;
@@ -127,15 +137,26 @@ a {
 			font-size: 0;
 			margin-left: 6%;
 			@include backgroundSvg("regretless.svg", 65%, 80px);
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				display: block;
+				@include backgroundSvg("regretless.svg",100%);
+			}
 		}
 	}
 
 	#facebook-profile-wrapper {
 		line-height: 0;
-		float: right;
-		margin: 0 -1.5em 0 1em;
+		float: left;
+		margin: 0 1.5em 0 0;
 		position: relative;
-		@include backgroundSvg("red_flower.svg", 100px);
+		&:before {
+			content: '';
+			display: inline-block;
+			@include backgroundSvg("red_flower.svg", 100px);
+		}
 		img {
 			border-radius: 50%;
 			position: absolute;
@@ -147,23 +168,32 @@ a {
 
 
 .social {
-	div:nth-of-type(3) {
-		&:after {
-			content: '';
-			position: absolute;
-			bottom: -1.5em;
-			border: 15px solid transparent;
-			border-bottom-color: $green;
-			left: 50%;
-			margin-left: -15px;
+	div {
+		text-align: center;
+		h4 {
+			margin: 0;
+			padding: 0;
+			font-size: 0;
+			width: 100%;
+			text-align: center;
+			&:after {
+				content: '';
+				display: inline-block;
+				border: 15px solid transparent;
+				border-bottom-color: $green;
+				line-height: 0;
+			}
+		}
+		&:first-child {
+			text-align: left;
+		}
+		&:last-child {
+			text-align: right;
 		}
 	}
 	a {
-		display: block;
-		width: 100%;
-		height: 100%;
+		display: inline-block;
 		font-size: 0;
-		text-align: center;
 		width: 50px;
 		height: 50px;
 		position: relative;
@@ -219,9 +249,10 @@ a {
 	min-height: 5em;
 	border-radius: 10px;
 	border: 2px dashed $green;
-	margin: 0;
-	padding: 0;
-	margin-top: 2em;
+	margin: 0 1em;
+	margin-top: .5em;
+	padding: 1em 1em 0 1em;
+	background-color: $panelColor;
 	&.loading:after {	
 		content: 'Loading latest tweets...';
 		position: absolute;
@@ -230,6 +261,7 @@ a {
 		left: 1em;
 		width: 100%;
 	}
+
 	li {
 		margin:  0 0 25px 0;
 		display: block;
@@ -264,8 +296,11 @@ a {
 
 
 #themes {
+	margin-top: 5em;
 	margin-bottom: 0;
 	position: relative;
+	padding: 5px;
+	border: 2px dashed $purpleRed;
 	&:before, &:after {
 		content: '';
 		position: absolute;
@@ -273,48 +308,36 @@ a {
 	&:before {
 		@include backgroundSvg("blue_flower.svg", 100px);
 		opacity: .5;
-		z-index: -1;
 		left: -30px;
 		top: -3em;
 	}
 	&:after {
 		@include backgroundSvg("04_flower.svg", 300px);
 		opacity: .5;
-		z-index: -1;
 		right: -200px;
 		top: -200px;
 	}
 	h1 {
-		margin: 0 0 0 1.5em;
-		padding: 0;
-		a {
-			display: block;
-			font-size: 0;
-			&:before {
-				content: '\e800';
-				font-family: 'dragonIsComing';
-				font-size: 35px;
-				color: $pink;
-				line-height: 60px;
-				@include animation(themeColorChange 5s linear alternate infinite);
-			}
+		margin: 0 0 0 1rem;
+		padding: 0 0 0 2rem;
+		font-size: 0;
+		&:before {
+			content: '\e800';
+			font-family: 'dragonIsComing';
+			font-size: 35px;
+			color: $pink;
+			line-height: 60px;
+			@include animation(themeColorChange 5s linear alternate infinite);
+			text-shadow: 1px 1px $blue;
 		}
 	}
-
-	.bx-wrapper {
-		border-radius: 10px;
-		img {
-			border-radius: 10px;
-		}
-	}
-
 	.sb-description {
 		position: absolute;
 		top: 50px;
 		left: 0;
 		height: 50px;
 		width: 100%;
-		background-color: rgba($orange, .7);
+		background-color: rgba($purpleRed, .3);
 		h3, a.download {
 			color: darken($blue, 15%);
 			text-shadow: 1px 1px lighten($blue, 15%);
@@ -383,15 +406,16 @@ a {
 		top: 65%;
 		font-size: 0;
 		text-decoration: none;
-		color: $pink;
+		color: $purpleRed;
 		width: 50px;
 		text-align: center;
 		border-radius: 50%;
 		@include transition(all 0.5s);
+		background-color: rgba($purpleRed, .3);
 		&:hover {
 			text-decoration: none;
 			background-color: rgba($blue, .7);
-			color: darken($pink, 5%);
+			color: darken($purpleRed, 5%);
 		}
 		&:before {
 			display: inline-block;
@@ -438,7 +462,8 @@ a {
 		display: block;
 		font-size: 0;
 		@include backgroundSvg("arrowup.svg", 30px);
-		bottom: 50px;
+		height: 90px;
+		bottom: 0;
 		@include animation(bounce 2s infinite);
 	}
 	&:before {
@@ -466,81 +491,19 @@ img {
 	max-width: 100%;	
 }
 
+
 @media (max-width: 450px) {
-	p, #themes h1 {
-		font-size: .85rem;
-	}
-	#intro {
-		background: rgba($panelColor, .5);
-	}
-	#intro {
-		#header {
-			&:before {
-				right: -100px;
-				z-index: -1;
-			}
-		}
-		.logo {
-			position: relative;
-			height: 30px;
-			a {
-				display: inline-block;
-				min-width: 80%;
-				margin-left: 0;
-				height: 70px;
-				position: absolute;
-				top: -20px;
-				right: 0;
-				z-index: 10;
-			}
-		}
-	}
-	#themes {
-		background: transparent;
-	}
-	#footer {
-		&:after {
-			display: none;
-		}
-	}
+	@import "smallOnly";
 }
 
 @media #{$medium-up} {
-	#container {
-		padding-bottom: 120px;
-	}
-	#footer {
-		overflow: visible;
-		p {
-			&:before, &:after {
-				content: '';
-				position: absolute;
-				z-index: -1;
-				left: -150px;
-				top: -120px;
-				@include backgroundSvg("03_flower.svg", 270px);
-			}
-			&:after {
-				@include backgroundSvg("orange_flower.svg", 100px);
-				background-position: 40% 70%;
-				top: 2em;
-				left: 6em;
-				opacity: .5;
-			}
-		}
-		a {
-			width: 40px;
-			height: 40px;
-		}
-		&:before {
-			@include backgroundSvg("02_butterfly.svg", 200px);
-			left: -70px;
-			top: -100px;
-			z-index: 10;
-		}
-	}
+	@import "mediumUp";
 }
 
 @media #{$large-up} {
-
+	@import "largeUp";
+	@import "butterfly";
+}
+@media #{$xlarge-up} {
+	@import "xlargeUp";
 }

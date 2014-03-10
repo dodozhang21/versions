@@ -1,0 +1,72 @@
+#container {
+	padding-bottom: 120px;
+}
+#intro {
+	&:after {
+		top: -150px;
+		left: -50px;
+	}
+}
+.social {
+	div:first-child, div:last-child {
+		text-align: center;
+	}
+}
+#themes {
+	margin-top: 10rem;
+	h1 {
+		position: relative;
+		&:before {
+			font-size: 50px;
+			position: absolute;
+			top: -5rem;
+			left: 1.5rem;
+			z-index: 1001;
+		}
+	}
+	&:before,&:after {
+		z-index: 1000;
+	}
+	&:before {
+		top: -7rem;
+		left: -5rem;
+		width: 150px;
+		height: 150px;
+		opacity: .8;
+	}
+	&:after {
+		right: -220px;
+		top: -250px;
+	}
+}
+#footer {
+	overflow: visible;
+	p {
+		left: 10rem;
+		&:before, &:after {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			left: -150px;
+			top: -120px;
+			@include backgroundSvg("03_flower.svg", 270px);
+		}
+		&:after {
+			@include backgroundSvg("orange_flower.svg", 100px);
+			background-position: 40% 70%;
+			top: 2em;
+			left: 6em;
+			opacity: .5;
+		}
+	}
+	a {
+		width: 40px;
+		height: 40px;
+	}
+	&:before {
+		@include backgroundSvg("02_butterfly.svg", 200px);
+		left: -70px;
+		top: -70px;
+		z-index: 1000;
+	}
+}
