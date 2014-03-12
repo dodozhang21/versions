@@ -42,6 +42,9 @@ $maxWidth: 990px;
 			width: auto;
 			background: none;
 			margin-left: 0;
+			&:before {
+				top: 10px;
+			}
 		}
 	}
 	p {

@@ -24,10 +24,10 @@ if(!isset($twitterPath)) { $twitterPath = "../../"; }
 <body>
 <div id="container">
 	<section id="wrapper">
-		<div class="butterfly" title="Spring is here!">
-		  <div class="wing1"></div>
-		  <div class="wing2"></div>
-		</div>
+		  <div id="butterfly">
+			<div class="left wing"></div>
+			<div class="right wing"></div>
+		  </div>
 		<div id="intro">
 			<header id="header">
 				<h1 class="logo"><a href="http://regretless.com" title="regretless.com"><span>The gal behind the scene...</span></a></h1>
