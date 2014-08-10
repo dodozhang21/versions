@@ -13,7 +13,7 @@ $themes = array(
 	,'pinkXmas'=>array('Pink Xmas', 'http://pure-essence.net/2013/04/24/child-theme-for-twenty-twelve-pink-xmas/')
 	,'summerDay'=>array('Summer Day', 'http://pure-essence.net/2013/04/26/child-theme-for-oriental-summer-day/')
 	,'backToSchool'=>array('Back to School', 'http://pure-essence.net/2013/05/01/child-theme-for-twenty-twelve-back-to-school/')
-	,'orientalWriting'=>array('Oriental Writing', 'http://pure-essence.net/2013/06/25/child-theme-for-oriental-oriental-writing/')
+	,'oriental-writing/'=>array('Oriental Writing', 'http://pure-essence.net/2013/06/25/child-theme-for-oriental-oriental-writing/')
 	);
 function printThemes() {
 	global $themes;
