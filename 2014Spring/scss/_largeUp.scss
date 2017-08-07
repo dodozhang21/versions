@@ -79,11 +79,9 @@ $maxWidth: 990px;
 	}
 }
 
-.social, .latestTweet {
+.social {
 	position: absolute;
 	left: 0;
-}
-.social {
 	top: 550px;
 	width: 500px;
 	div, div:first-child, div:last-child {
@@ -95,10 +93,6 @@ $maxWidth: 990px;
 			}
 		}
 	}
-}
-.latestTweet {
-	top: 650px;
-	width: 600px;
 }
 #themes {
 	margin-top: 5rem;

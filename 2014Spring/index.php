@@ -1,6 +1,6 @@
 <?php 
 if(!isset($path)) { $path = ""; }
-if(!isset($jspath)) { $jspath = "bower_components/"; }
+if(!isset($jspath)) { $jspath = "node_modules/"; }
 if(!isset($themeListPath)) { $themeListPath = "../"; }
 if(!isset($twitterPath)) { $twitterPath = "../../"; }
 ?>
@@ -13,57 +13,53 @@ if(!isset($twitterPath)) { $twitterPath = "../../"; }
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<meta name="author" content="Ying Zhang" />
 	<link rel="icon" type="image/png" href="/images/icon.png" />
-	
-    <link rel="stylesheet" href="<?=$path?>css/app.css" />
-
-	<script type="text/javascript" src="<?=$jspath?>modernizr/modernizr.js"></script>
-
+  <link rel="stylesheet" href="<?=$path?>css/app.css" />
 </head>
 
 
 <body>
-<div id="container">
-	<section id="wrapper">
-		  <div id="butterfly">
-			<div class="left wing"></div>
-			<div class="right wing"></div>
-		  </div>
-		<div id="intro">
-			<header id="header">
+<div class="container">
+	<section class="wrapper">
+    <div class="butterfly">
+      <div class="left wing"></div>
+      <div class="right wing"></div>
+    </div>
+		<div class="introWrapper">
+			<header class="header">
 				<h1 class="logo"><a href="http://regretless.com" title="regretless.com"><span>The gal behind the scene...</span></a></h1>
 			</header><!-- /header -->
 			<article class="about">
-				<div id="facebook-profile-wrapper"><img src="http://graph.facebook.com/1055884671/picture?type=small" id="facebook-profile" alt="facebook profile photo" title="facebook profile photo"/></div>
+				<div class="facebookProfileWrapper">
+          <img src="http://graph.facebook.com/1055884671/picture?type=small" class="facebookProfile" alt="facebook profile photo" title="facebook profile photo"/>
+        </div>
 				<p>
-				Welcome to regretless.com! My name is Ying Zhang and I'm a professional programmer and web designer. I've spent almost two decades designing web pages and create web applications.  My specialty is responsive web design and Java web application. I currently work full time as a Sr. Systems Engineer for Meredith on their parents.com/bhg.com team.  In my spare time, I enjoy writing on my blog <a href="http://pure-essence.net/" title="pure-essence.net">pure-essence.net</a> and create WordPress themes.  These days I also play on <a href="http://codepen.io/dodozhang21/">codepen.io</a>. Regretless.com is a portfolio for my free WordPress themes and other hobby websites. Happy browsing!
+				Welcome to regretless.com! My name is Ying Zhang and I'm a professional programmer and web designer.
+        I've spent two decades designing web pages and create web applications.
+        My specialty is responsive web design, Express, Drupal and Java web application.
+        I currently work full time as a Leader Engineer for Meredith Inc - a media company that owns brands such as Better Homes and Gardens, allrecipes.com and Parents.
+        In my spare time, I enjoy <a href="https://www.youtube.com/playlist?list=PL4ON5BewSYuE2cZQlzt5oruhb9MtrowZV" title="The songs I sang">recording my singing</a>,
+        play on <a href="http://codepen.io/dodozhang21/" title="Ying Zhang's codepen projects">codepen.io</a>,
+        writing on my blog <a href="http://pure-essence.net/" title="pure-essence.net">pure-essence.net</a> and create WordPress themes.
+        Regretless.com is a portfolio for my free WordPress themes and other hobby websites. Happy browsing!
 				</p>
 			</article>
 		</div>
 
-		<div class="row social">
-			<div class="large-2 medium-3 small-3 columns">
-				<a href="http://pure-essence.net/about/contact/" class="email">Email</a>
-			</div>
-			<div class="large-2 medium-3 small-3 columns">
-				<a href="//www.facebook.com/dodozhang21" class="facebook">Facebook</a>
-			</div>
-			<div class="large-2 medium-3 small-3 columns">
-				<a href="//twitter.com/dodozhang21" class="twitter">Twitter</a>
-				<h4>Latest Tweets</h4>
-			</div>
-			<div class="large-6 medium-3 small-3 columns">
-				<a href="//www.linkedin.com/in/dodozhang21" class="linkedin">LinkedIn</a>
-			</div>
+		<div class="socialWrapper">
+      <a href="http://pure-essence.net/about/contact/" class="socialIcon email">Email</a>
+      <a href="//www.facebook.com/dodozhang21" class="socialIcon facebook">Facebook</a>
+      <a href="//twitter.com/dodozhang21" class="socialIcon twitter">Twitter</a>
+      <a href="//www.linkedin.com/in/dodozhang21" class="socialIcon linkedin">LinkedIn</a>
 		</div>
 
-		<p id="latestTweet" class="latestTweet loading">
-		&nbsp;
-		</p>
+    <h2 class="latestRecordingTitle">My Sample Recording</h2>
+    <div class="latestRecording">
+      <div id="ytplayer"></div>
+		</div>
 
-
-		<div id="themes">
+		<div class="themesWrapper">
 			<header>
-				<h1 class="logo">Themes and More</h1>
+				<h2 class="themesTitle">Themes and More</h2>
 			</header>
 			<article class="themes">
 				<ul id="sb-slider" class="bxslider">
@@ -74,29 +70,33 @@ if(!isset($twitterPath)) { $twitterPath = "../../"; }
 	</section>
 
 
-	<section id="footer">
-		<p>Designed by Ying Zhang &copy; 2014</p>
-		<a href="#container" class="backToTop scrolltoanchor" title="Back to top">Top</a>
-	</section>
+	<footer class="footer">
+		<p>Designed by Ying Zhang &copy; 2017</p>
+		<a href="#container" class="backToTop scrollToAnchor" title="Back to top">Top</a>
+	</footer>
 </div><!--/container-->
-
-<script type="text/javascript"> 
-var $buoop = {vs:{i:10,f:25,o:17,s:6,n:9}}; 
-$buoop.ol = window.onload; 
-window.onload=function(){ 
- try {if ($buoop.ol) $buoop.ol();}catch (e) {} 
- var e = document.createElement("script"); 
- e.setAttribute("type", "text/javascript"); 
- e.setAttribute("src", "//browser-update.org/update.js"); 
- document.body.appendChild(e); 
-} 
-</script> 
 	
-	<script src="<?=$jspath?>jquery/dist/jquery.min.js"></script>
-    <script src="<?=$jspath?>foundation/js/foundation.min.js"></script>
-    <script src="<?=$jspath?>bxSlider/jquery.bxslider.min.js"></script>
-	<script>var twitterPath = '<?=$twitterPath?>';</script>
-    <script src="<?=$path?>js/app.js"></script>
+<script src="<?=$jspath?>jquery/dist/jquery.js"></script>
+<script src="<?=$jspath?>bxslider/dist/jquery.bxslider.js"></script>
+<script>var twitterPath = '<?=$twitterPath?>';</script>
+<script src="<?=$path?>js/app.js"></script>
+<script>
+  // Load the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+  // Replace the 'ytplayer' element with an <iframe> and
+  // YouTube player after the API code downloads.
+  var player;
+
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+      height: '50',
+      videoId: 'CJGuvC8rYIE'
+    });
+  }
+</script>
 </body>
 </html>	

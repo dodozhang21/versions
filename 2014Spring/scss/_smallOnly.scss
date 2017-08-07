@@ -2,11 +2,8 @@ p {
 	font-size: .85rem;
 }
 
-#intro, .latestTweet {
-	background: rgba($panelColor, .5);
-}
-
 #intro {
+	background: rgba($panelColor, .5);
 	p {
 		padding: 1em 1em 0 1em;
 	}
@@ -41,10 +38,20 @@ p {
 		text-align: center;
 	}
 }
-.latestTweet {
-	ul {
-		padding-top: 0;
-	}
+.latestRecordingTitle {
+	@include backgroundSvg("mySampleRecording.svg", 60vw, 36px);
+	font-size: 0;
+	margin: 1.5rem auto 0;
+}
+.latestRecording {
+	position: relative;
+	max-width: calc(100% - 2em);
+	border-radius: 10px;
+	border: 2px dashed $green;
+	min-height: 3.75rem;
+	margin: 0 1rem 1rem;
+	padding: 5px;
+	background: rgba($panelColor, .5);
 }
 #themes {
 	margin-top: 4rem;

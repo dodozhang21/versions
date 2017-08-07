@@ -1,0 +1,18 @@
+// Breakpoints
+$mediumBreakpoint: 679px;
+$largeBreakpoint: 1006px;
+$xlargeBreakpoint: 1291px;
+
+$screen: "only screen";
+
+$smallUp: $screen;
+$smallOnly: "#{$screen} and (max-width: #{rem-calc($mediumBreakpoint - 1)})";
+
+$mediumUp: "#{$screen} and (min-width:#{rem-calc($mediumBreakpoint)})";
+$mediumOnly: "#{$screen} and (min-width:#{rem-calc($mediumBreakpoint)}) and (max-width:#{rem-calc($largeBreakpoint - 1)})";
+
+$largeUp: "#{$screen} and (min-width:#{rem-calc($largeBreakpoint)})";
+$largeOnly: "#{$screen} and (min-width:#{rem-calc($largeBreakpoint)}) and (max-width:#{rem-calc($xlargeBreakpoint - 1)})";
+
+$xlargeUp: "#{$screen} and (min-width:#{rem-calc($xlargeBreakpoint)})";
+$xlargeOnly: "#{$screen} and (min-width:#{rem-calc($xlargeBreakpoint)}) and (max-width:99999999em)";
