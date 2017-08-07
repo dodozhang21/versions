@@ -20,7 +20,6 @@ a {
   color: $darkBlue;
   text-shadow: 1px 1px $lightBlue;
   text-decoration: none;
-  transition: all 0.5s;
   &:hover {
     text-decoration: none;
     color: $darkGreen;
@@ -230,21 +229,19 @@ img {
   height: 50px;
   width: 100%;
   background-color: rgba($purpleRed, .3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
   h3 {
     font-family: 'Roboto Slab', serif;
-    font-size: 150%;
-    position: absolute;
-    top: 0;
-    left: 10%;
+    margin-left: 10%;
     transition: all .2s;
     white-space: nowrap;
     line-height: 0;
   }
   .download {
     display: block;
-    position: absolute;
-    top: 8%;
-    right: 10%;
     width: 40px;
     height: 40px;
     text-align: center;
@@ -342,7 +339,6 @@ img {
 .footer {
   height: 100px;
   position: relative;
-  overflow: hidden;
   &:before, &:after, a, p {
     content: '';
     position: absolute;
@@ -371,43 +367,3 @@ img {
   height: 90px;
   animation: bounce 2s infinite;
 }
-
-/*
-#footer {
-	position: relative;
-	overflow: hidden;
-	height: 100px;
-	&:before, &:after, a, p {
-		content: '';
-		position: absolute;
-	}
-	p {
-		left: 15%;
-		top: 20%;
-		font-size: 90%;
-		color: $footerCreditColor;
-		white-space: nowrap;
-	}
-	a {
-		right: 15%;
-		display: block;
-		font-size: 0;
-		@include backgroundSvg("arrowup.svg", 30px);
-		height: 90px;
-		bottom: 0;
-		@include animation(bounce 2s infinite);
-	}
-	&:before {
-		@include backgroundSvg("03_flower.svg", 250px);
-		left: -10px;
-		top: -100px;
-	}
-	&:after {
-		@include backgroundSvg("03_flower.svg", 400px);
-		@include transform(rotateY(190deg));
-		top: -200px;
-		right: -20px;
-		z-index: -1;
-	}
-}
- */

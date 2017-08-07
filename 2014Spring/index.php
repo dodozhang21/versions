@@ -38,8 +38,8 @@ if(!isset($twitterPath)) { $twitterPath = "../../"; }
         My specialty is responsive web design, Express, Drupal and Java web application.
         I currently work full time as a Leader Engineer for Meredith Inc - a media company that owns brands such as Better Homes and Gardens, allrecipes.com and Parents.
         In my spare time, I enjoy <a href="https://www.youtube.com/playlist?list=PL4ON5BewSYuE2cZQlzt5oruhb9MtrowZV" title="The songs I sang">recording my singing</a>,
-        play on <a href="http://codepen.io/dodozhang21/" title="Ying Zhang's codepen projects">codepen.io</a>,
-        writing on my blog <a href="http://pure-essence.net/" title="pure-essence.net">pure-essence.net</a> and create WordPress themes.
+        playing on <a href="http://codepen.io/dodozhang21/" title="Ying Zhang's codepen projects">codepen.io</a>
+        and writing on my blog <a href="http://pure-essence.net/" title="pure-essence.net">pure-essence.net</a>.
         Regretless.com is a portfolio for my free WordPress themes and other hobby websites. Happy browsing!
 				</p>
 			</article>

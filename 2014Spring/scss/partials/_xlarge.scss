@@ -1,0 +1,33 @@
+.themes {
+  position: relative;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+  }
+  &:before {
+    @include backgroundSvg('02_flower.svg', 500px);
+    z-index: -1;
+    transform: rotate(140deg);
+    top: -250px;
+    left: -400px;
+  }
+  &:after {
+    @include backgroundSvg('03_butterfly.svg', 80px);
+    left: -80px;
+    top: 390px
+  }
+}
+
+.introWrapper {
+  margin: 100px 30px 100px 670px;
+}
+.wrapper {
+  max-width: 1000px;
+}
+
+.bx-prev {
+  left: -5%;
+}
+.bx-next {
+  right: -5%;
+}

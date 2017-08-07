@@ -1,0 +1,177 @@
+body {
+  background-image: linear-gradient(to bottom, $white, $orange 17%, $white);
+}
+
+.wrapper {
+  max-width: 990px;
+  position: relative;
+  margin: 0 auto;
+  &:before, &:after {
+    position: absolute;
+    content: '';
+  }
+  &:before {
+    @include backgroundSvg('green_flower.svg', 100px);
+    left: -35px;
+    top: 55px;
+    z-index: 100;
+    animation: rotate 10s linear infinite;
+  }
+  &:after {
+    right: 186px;
+    top: 416px;
+    transform: rotate(15deg);
+    @include backgroundSvg('04_flower.svg', 300px);
+    z-index: -1;
+  }
+}
+
+.introWrapper {
+  float: right;
+  width: auto;
+  margin: 100px 40px 100px 660px;
+  transform: rotate(2deg);
+  background-color: $panelColor;
+  &:before {
+    content: '';
+    position: absolute;
+    @include backgroundSvg('01_butterfly.svg', 100px);
+    top: 20px;
+    right: -80px;
+  }
+  &:after {
+    @include backgroundSvg('01_flower.svg', 600px, 200px);
+    top: -120px;
+    left: -147px;
+    right: auto;
+    bottom: auto;
+    transform: rotate(-5deg);
+    opacity: .7;
+  }
+}
+
+.container {
+  &:before, &:after {
+    display: none;
+  }
+}
+
+.header {
+  &:before,&:after {
+    display: none;
+  }
+}
+
+.logo {
+  height: 50px;
+  a {
+    width: 100%;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    margin-top: 1rem;
+  }
+}
+
+.about {
+  margin: 2rem 1rem 1rem;
+  padding: 0;
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+}
+
+.facebookProfileWrapper {
+  float: left;
+  margin: 2rem 1rem 1rem -4rem;
+}
+
+.themesTitle {
+  width: auto;
+  margin: 0 0 0 4rem;
+}
+
+.themesWrapper, .socialWrapper, .latestRecordingTitle, .latestRecording {
+  position: absolute;
+}
+
+.themesWrapper {
+  width: 600px;
+  top: 0;
+  left: 0;
+  &:before, &:after {
+    display: none;
+  }
+}
+
+.themes {
+  background-color: $panelColor;
+}
+
+.socialWrapper {
+  top: 550px;
+  width: 300px;
+  margin-left: 1.5rem;
+}
+
+.socialIcon {
+  &:hover {
+    &:before {
+      animation: rotate 4s linear infinite;
+      opacity: .4;
+    }
+  }
+}
+.latestRecordingTitle,
+.latestRecording {
+  margin-left: 3rem;
+}
+.latestRecordingTitle {
+  top: 620px;
+}
+.latestRecording {
+  top: 690px;
+  width: 500px;
+}
+
+.footer {
+  clear: both;
+  &:before {
+    display: none;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    @include backgroundSvg('03_flower.svg', 400px);
+    transform: rotateY(190deg);
+    top: -262px;
+    right: -150px;
+    z-index: -1;
+  }
+  p {
+    top: -20%;
+    left: 0;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+    }
+    &:before {
+      @include backgroundSvg('03_flower.svg', 270px);
+      transform: rotate(15deg);
+      top: -106px;
+      left: -193px;
+      z-index: -1;
+    }
+    &:after {
+      @include backgroundSvg('02_butterfly.svg', 150px);
+      top: -10px;
+      right: -400px;
+      transform: rotateY(-180deg);
+    }
+  }
+}
+
+.backToTop {
+  display: none;
+}

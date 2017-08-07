@@ -4,8 +4,8 @@
   "scripts": {
     "scss": "node-sass scss/ -output=css --output-style=compressed  --include-path ./node_modules/compass-mixins/lib --include-path ./node_modules/foundation-sites/scss",
     "scss:watch": "node-sass scss/ -output=css --output-style=expanded --include-path=./node_modules/compass-mixins/lib --include-path=./node_modules/foundation-sites/scss --watch",
-    "browser-sync": "browser-sync start --files \"css/**/*.css\" --proxy localhost:1234 --no-ui --no-open",
-    "local_all": "concurrently --kill-others \"npm run scss:watch\" \"npm run browser-sync\""
+    "browser:sync": "browser-sync start --files \"css/**/*.css\" --proxy localhost:1234 --no-ui --no-open",
+    "local:all": "concurrently --kill-others \"npm run scss:watch\" \"npm run browser:sync\""
   },
   "dependencies": {
     "bxslider": "git+https://github.com/stevenwanderski/bxslider-4.git#v4.2.12",

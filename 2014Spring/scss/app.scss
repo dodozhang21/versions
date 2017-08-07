@@ -11,6 +11,7 @@
 
 @media #{$largeUp} {
   @import "partials/large";
+  @import "partials/butterfly";
 }
 @media #{$xlargeUp} {
   @import "partials/xlarge";

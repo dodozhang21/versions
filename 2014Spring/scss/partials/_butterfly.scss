@@ -1,0 +1,78 @@
+@mixin butterflyFluttering($butterflyWingHeight: 100px, $selector: ".butterfly") {
+  #{$selector} {
+
+    $flowerWidth: $butterflyWingHeight * 6;
+
+    transform: rotateZ(20deg) rotate3d(0, 1, 0, 0deg) scale3d(0.5, 0.5, 0.5);
+    transform-origin: 51% 50%;
+    transform-style: preserve-3d;
+    @include backgroundSvg("blue_flower_wo.svg", $flowerWidth);
+
+    position: absolute;
+    top: -60px;
+    right: 260px;
+    z-index: 1002;
+
+    .wing {
+
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        background: radial-gradient(ellipse at center, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
+        box-shadow: 0 0 $butterflyWingHeight/2 rgba(0,0,0,0.25);
+      }
+      &:before {
+        top: $butterflyWingHeight * .6;
+        left: $butterflyWingHeight * 3.7;
+        width: $butterflyWingHeight * 1.5;
+        height: $butterflyWingHeight * 1.4;
+      }
+
+      position: absolute;
+      transform: rotateX(30deg) translate3d(-(2*$butterflyWingHeight), 0px, 0px) rotate3d(0, 1, 0, 160deg);
+      transform-origin: top right;
+      -webkit-transform-origin: top right;
+      left: $butterflyWingHeight;
+      top: 50%;
+      margin-top: -$butterflyWingHeight;
+
+      @include backgroundSvg("04_butterfly.svg", $butterflyWingHeight * 4);
+      background-position: $butterflyWingHeight * 2 0;
+
+      animation: rightwingani 6s ease-out infinite;
+
+      &.left{
+        transform: rotateX(30deg) rotate3d(0, 1, 0, 0deg);
+        animation: leftwingani 6s ease-out infinite;
+        left: -$butterflyWingHeight;
+      }
+    }
+  } // end of selector
+
+  @include keyframes(rightwingani) {
+    from {
+      transform: rotateX(30deg) translate3d(-(2*$butterflyWingHeight), 0px, 0px) rotate3d(0, 1, 0, 160deg);
+    }
+    50% {
+      transform: rotateX(30deg) translate3d(-(2*$butterflyWingHeight), 0px, 0px) rotate3d(0, 1, 0, 100deg);
+    }
+    to{
+      transform: rotateX(30deg) translate3d(-(2*$butterflyWingHeight), 0px, 0px) rotate3d(0, 1, 0, 160deg);
+    }
+  }
+
+  @include keyframes(leftwingani) {
+    from {
+      transform: rotateX(30deg) rotate3d(0, 1, 0, 0deg);
+    }
+    50% {
+      transform: rotateX(30deg) rotate3d(0, 1, 0, 80deg);
+    }
+    to{
+      transform: rotateX(30deg) rotate3d(0, 1, 0, 00deg);
+    }
+  }
+}
+
+@include butterflyFluttering(50px);
