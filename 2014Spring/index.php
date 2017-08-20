@@ -54,7 +54,7 @@ if(!isset($twitterPath)) { $twitterPath = "../../"; }
 
     <h2 class="latestRecordingTitle">My Sample Recording</h2>
     <div class="latestRecording">
-      <div id="ytplayer"></div>
+      <div id="player"></div>
 		</div>
 
 		<div class="themesWrapper">
@@ -80,21 +80,22 @@ if(!isset($twitterPath)) { $twitterPath = "../../"; }
 <script src="<?=$jspath?>bxslider/dist/jquery.bxslider.js"></script>
 <script>var twitterPath = '<?=$twitterPath?>';</script>
 <script src="<?=$path?>js/app.js"></script>
+<script src="<?=$path?>js/youtube.js"></script>
 <script>
-  // Load the IFrame Player API code asynchronously.
   var tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/player_api";
+  tag.src = "https://www.youtube.com/iframe_api";
   var firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-  // Replace the 'ytplayer' element with an <iframe> and
-  // YouTube player after the API code downloads.
   var player;
-
-  function onYouTubePlayerAPIReady() {
-    player = new YT.Player('ytplayer', {
-      height: '50',
-      videoId: 'CJGuvC8rYIE'
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '0',
+      videoId: 'CJGuvC8rYIE',
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
     });
   }
 </script>
