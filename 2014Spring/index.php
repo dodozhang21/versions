@@ -55,6 +55,28 @@ if(!isset($twitterPath)) { $twitterPath = "../../"; }
     <h2 class="latestRecordingTitle">My Sample Recording</h2>
     <div class="latestRecording">
       <div id="player"></div>
+      <div class="musicPlayer">
+        <div class="musicPlayer__controllers">
+          <a href="#" id="play" class="playPause">Play/Pause</a>
+          <div id="musicNotes" class="musicNotes">
+            <div class="notePosition1 noteAnimation">
+              &#9835;
+            </div>
+            <div class="notePosition2 noteAnimation animationDelay2">
+              &#9833;
+            </div>
+            <div class="notePosition3 noteAnimation animationDelay1">
+              &#9839;
+            </div>
+            <div class="notePosition4 noteAnimation">
+              &#9834;
+            </div>
+          </div>
+          <a
+            href="https://www.youtube.com/playlist?list=PL4ON5BewSYuE2cZQlzt5oruhb9MtrowZV"
+            id="moreMusic" class="moreMusic" title="More Recordings">More Music</a>
+        </div>
+      </div>
 		</div>
 
 		<div class="themesWrapper">
@@ -92,9 +114,9 @@ if(!isset($twitterPath)) { $twitterPath = "../../"; }
     player = new YT.Player('player', {
       height: '0',
       videoId: 'CJGuvC8rYIE',
+      playerVars: {'start': 2, 'loop': 1},
       events: {
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
+        'onReady': onPlayerReady
       }
     });
   }

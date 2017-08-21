@@ -134,12 +134,7 @@ img {
     top: 0;
     left: 0;
     width: 50px;
-    font-family: 'icomoon';
-    speak: none;
-    font-style: normal;
-    font-weight: 400;
-    font-variant: normal;
-    text-transform: none;
+    @include iconFontFamily;
     display: inline-block;
     font-size: 26px;
     line-height: 50px;
@@ -174,10 +169,11 @@ img {
 .latestRecording {
   position: relative;
   max-width: calc(100% - 2rem);
-  border-radius: 10px;
   border: 2px dashed $green;
-  min-height: 3rem;
-  margin: 0 auto;
+  border-left-width: 0;
+  border-right-width: 0;
+  min-height: 30px;
+  margin: 2rem auto 0;
   padding: 5px;
   background: rgba($panelColor, .5);
 }
@@ -187,6 +183,131 @@ img {
   width: 100%;
   top: 0;
   left: 0;
+}
+
+.musicPlayer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -27px;
+  left: 0;
+}
+
+.musicPlayer__controllers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.playPause, .moreMusic {
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  background: rgba($darkGreen, 0.4);
+  border-radius: 50%;
+  text-align: center;
+  transition: background-color 0.5s linear;
+  &:before {
+    @include iconFontFamily;
+    font-size: 20px;
+    line-height: 40px;
+    color: $darkGreen;
+    text-shadow: 1px 1px $brightGreen;
+  }
+  &:hover {
+    background: rgba($purpleRed, 0.3);
+  }
+}
+
+.moreMusic {
+  &:before {
+    content: $icon-next;
+    padding-left: 4px;
+    font-size: 26px;
+  }
+}
+
+.playPause {
+  width: 60px;
+  height: 60px;
+  &:before {
+    content: $icon-play;
+    font-size: 30px;
+    line-height: 60px;
+    padding-left: 5px;
+  }
+  &.playing {
+    &:before {
+      content: $icon-pause;
+      padding-left: 0;
+    }
+  }
+}
+
+.musicNotes {
+  position: relative;
+  height: 80px;
+  flex: 1 1 1%;
+  margin: 0 1rem;
+  max-width: 300px;
+  color: $darkGreen;
+  &:hover {
+    color: rgba($purpleRed, 0.8);
+  }
+}
+
+.notePosition1 {
+  top: 50%;
+}
+
+.notePosition2 {
+  top: 80%;
+  left: 25%;
+}
+
+.notePosition3 {
+  top: 60%;
+  left: 90%;
+}
+
+.notePosition4 {
+  top: 55%;
+  left: 65%;
+}
+
+.animationDelay1 {
+  animation-delay: 0.5s;
+}
+
+.animationDelay2 {
+  animation-delay: 1s;
+}
+
+.noteAnimation {
+  position: absolute;
+  font-size: 25px;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  opacity: 0;
+  .playing & {
+    animation-name: notes;
+  }
+}
+
+@keyframes notes {
+  0% {
+    font-size: 25px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    font-size: 40px;
+    margin-top: -50px;
+    opacity: 0;
+  }
 }
 
 .themesTitle {
@@ -252,13 +373,10 @@ img {
     color: $darkBlue;
     text-shadow: 1px 1px $blue;
     &:before {
-      font-family: 'nightsky';
-      font-style: normal;
-      font-weight: normal;
-      speak: none;
+      @include iconFontFamily;
       font-size: 25px;
       line-height: 40px;
-      content: '\e80b';
+      content: $icon-download;
     }
     &:after {
       top: 0;
@@ -314,10 +432,7 @@ img {
   }
   &:before {
     display: inline-block;
-    font-family: 'icomoon';
-    font-style: normal;
-    font-weight: normal;
-    speak: none;
+    @include iconFontFamily;
     font-size: 30px;
     line-height: 50px;
     transition: all 0.5s;
