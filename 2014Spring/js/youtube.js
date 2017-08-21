@@ -4,6 +4,10 @@
   // 4. The API will call this function when the video player is ready.
   global.onPlayerReady = function(event) {
     player = event.target;
+    player.playVideo();
+    setTimeout(function() {
+      player.pauseVideo();
+    }, 2000);
   };
 
   global.onPlayerStateChange = function (event) {

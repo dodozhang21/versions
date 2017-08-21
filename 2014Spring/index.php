@@ -2,7 +2,6 @@
 if(!isset($path)) { $path = ""; }
 if(!isset($jspath)) { $jspath = "node_modules/"; }
 if(!isset($themeListPath)) { $themeListPath = "../"; }
-if(!isset($twitterPath)) { $twitterPath = "../../"; }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -100,7 +99,6 @@ if(!isset($twitterPath)) { $twitterPath = "../../"; }
 	
 <script src="<?=$jspath?>jquery/dist/jquery.js"></script>
 <script src="<?=$jspath?>bxslider/dist/jquery.bxslider.js"></script>
-<script>var twitterPath = '<?=$twitterPath?>';</script>
 <script src="<?=$path?>js/app.js"></script>
 <script src="<?=$path?>js/youtube.js"></script>
 <script>
