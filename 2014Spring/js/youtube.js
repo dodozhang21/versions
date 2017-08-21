@@ -6,6 +6,13 @@
     player = event.target;
   };
 
+  global.onPlayerStateChange = function (event) {
+    // Loop the video
+    if (event.data === YT.PlayerState.ENDED) {
+      player.playVideo();
+    }
+  };
+
   $('#play').on('click', function(e) {
     e.preventDefault();
 

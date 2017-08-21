@@ -116,7 +116,8 @@ if(!isset($twitterPath)) { $twitterPath = "../../"; }
       videoId: 'CJGuvC8rYIE',
       playerVars: {'start': 2, 'loop': 1},
       events: {
-        'onReady': onPlayerReady
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
       }
     });
   }
