@@ -92,7 +92,7 @@ if(!isset($themeListPath)) { $themeListPath = "../"; }
 
 
 	<footer class="footer">
-		<p>Designed by Ying Zhang &copy; 2017</p>
+		<p>Designed by Ying Zhang &copy; <?=date('Y');?></p>
 		<a href="#container" class="backToTop scrollToAnchor" title="Back to top">Top</a>
 	</footer>
 </div><!--/container-->

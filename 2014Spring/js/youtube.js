@@ -5,6 +5,7 @@
   global.onPlayerReady = function(event) {
     player = event.target;
     player.playVideo();
+    console.log('video is ready');
     setTimeout(function() {
       player.pauseVideo();
     }, 2000);
